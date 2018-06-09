@@ -1,0 +1,19 @@
+html{
+  position: relative;
+  min-height: 100%;
+  
+}
+
+body {
+  
+
+}
+
+header{
+    margin-bottom: 50px;
+    border: 1px red solid;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
