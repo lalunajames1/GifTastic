@@ -15,7 +15,7 @@ $("#search-btn").on("click", function(){
     })
 
 function createBtn(){
-    // $("#header-btn").empty();
+    $("#header-btn").empty();
     // if ($("#search").val() === ""){
     //     let p = $("<p>").text("Add a value");
     //     $("<form>").append(p)
@@ -56,7 +56,7 @@ $(document).on("click", ".animal", function(){
                         "data-state": ""
                     })
 
-                    
+
             $("#images-container").append(image)
          }
 
