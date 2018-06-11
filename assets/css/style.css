@@ -11,7 +11,6 @@ body {
     background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 header {
@@ -39,7 +38,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.animal {
+.gif {
     background-color: #c5a805;
     height: 30px;
     width: 120px;
@@ -64,9 +63,20 @@ h2 {
 
 #search-btn {
     height: 30px;
-    width: 140px;
+    width: 145px;
     background-color: #383838;
     color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+}
+
+#clear-btn {
+    height: 30px;
+    width: 145px;
+    background-color: #f5f5f5;
+    color: #000000;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
     border-radius: 5px;
@@ -77,4 +87,8 @@ h2 {
     margin: 0 10px 10px 0;
     border: 2px solid #a785e7;
     border-radius: 5px;
+}
+
+.message {
+    font-size: 30px;
 }
