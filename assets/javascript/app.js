@@ -1,5 +1,6 @@
 var giphyArray = [];
 var headerBtns;
+var btnGiphy;
    
 $("#search-btn").on("click", function(){
     event.preventDefault()
@@ -8,12 +9,18 @@ $("#search-btn").on("click", function(){
      giphyArray.push(btnGiphy);
      // console.log(giphyArray)
       createBtn()
+          // if (btnGiphy == ""){
+    //     alert("hello")
+    // } else{
+    //     $("#header-btn").empty();
+    // }
     })
 
 function createBtn(){
     $("#header-btn").empty();
+
     for (let i = 0; i < giphyArray.length; i++){
-        headerBtns = $("<button>").attr("data-gif", giphyArray[i]).addClass("gif").text(giphyArray[i]);
+        headerBtns = $("<button>").attr("data-gif", giphyArray[i]).addClass("gifBtn").text(giphyArray[i]);
         $("#header-btn").append(headerBtns);
         if (i === 16)  {
             $("#header-btn").empty();
@@ -24,7 +31,7 @@ function createBtn(){
     }
 }
 
-$(document).on("click", ".gif", function(){
+$(document).on("click", ".gifBtn", function(){
         let queryParam =  $(this).attr("data-gif");
         let apiKey = "wYd5qA3nDmheJvPCM3DRvmdtCkP4lsrG";
         let numberofGifs = "10";
@@ -59,7 +66,7 @@ $(document).on("click", ".gif", function(){
        })
 
        $(document).on("click", ".img-class", function(){
-            var state = $(image).attr("data-state");
+            var state = $(image).attr("data-state"); //Why does it have to be "image" and not "this"
             console.log(state);
             if (state === "still"){
                 $(this).attr("src", $(this).attr("data-animate"));

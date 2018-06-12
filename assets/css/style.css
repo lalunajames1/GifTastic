@@ -8,15 +8,21 @@ html {
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+    
 }
 
 header {
-    margin-bottom: 50px;
     background-color: #fff;
     height: 80px;
+}
+
+footer {
+    background-color: #3d3d3d;
+    height: 80px;
+    position: absolute;
+    top: 100%;
+    bottom:0;
+    width: 100%;
 }
 
 h2 {
@@ -29,17 +35,31 @@ h2 {
     width: 1024px;
 }
 
+section{
+    background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+}
+
 .container {
     width: 100%;
     padding: 10px;
 }
 
+section .container {
+    min-height: 600px;
+}
 
 .row{
     margin-bottom: 10px;
 }
 
-form {
+.row > form {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.row > #images-container {
     text-align: center;
     padding-top: 50px;
 }
@@ -105,6 +125,12 @@ form {
 
 
 @media only screen and (max-width: 768px) {
+    section{
+        background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
+        background-repeat: no-repeat;
+        background-size: 100% 400px;
+    }
+
     .wrapper {
         width: 100%;
     }
@@ -112,13 +138,12 @@ form {
 }
 
 @media only screen and (max-width: 576px) {
-    body {
-        
+    section{
         background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
-    
+
     .wrapper {
         width: 100%;
     }
