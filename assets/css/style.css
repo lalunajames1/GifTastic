@@ -17,7 +17,6 @@ header {
     margin-bottom: 50px;
     background-color: #fff;
     height: 80px;
-    
 }
 
 h2 {
@@ -30,15 +29,22 @@ h2 {
     width: 1024px;
 }
 
-.ver-padding{
-    padding: 10px 0  10px 0;
+.container {
+    width: 100%;
+    padding: 10px;
 }
+
 
 .row{
     margin-bottom: 10px;
 }
 
-.gif {
+form {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.gifBtn {
     background-color: #c5a805;
     height: 30px;
     width: 120px;
@@ -48,6 +54,10 @@ h2 {
     border-radius: 5px;
     border: none;
     color: #fff;
+}
+
+.gifBtn:hover, gifBtn:active {
+    background-color: #d3b81f;
 }
 
 #search {
@@ -91,4 +101,41 @@ h2 {
 
 .message {
     font-size: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+        
+        background-image: url("https://media.giphy.com/media/8zR1DN0aPjIis/giphy.gif");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .wrapper {
+        width: 100%;
+    }
+
+    header {
+        margin-bottom: 50px;
+        padding: 5px 0 0 0;
+        background-color: #fff;
+        height: auto;
+      
+    }
+    .container{
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .row {
+        text-align: center;
+    }
 }
