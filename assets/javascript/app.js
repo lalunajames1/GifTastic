@@ -2,23 +2,22 @@ var giphyArray = [];
 var headerBtns;
 var btnGiphy;
    
-$("#search-btn").on("click", function(){
+$("#search-btn").on("click", function(event){
     event.preventDefault()
     btnGiphy = $("#search").val();
      // console.log(btnGiphy);
-     giphyArray.push(btnGiphy);
      // console.log(giphyArray)
-      createBtn()
-          // if (btnGiphy == ""){
-    //     alert("hello")
-    // } else{
-    //     $("#header-btn").empty();
-    // }
+          if (btnGiphy == ""){
+        alert("hello");
+    } else {
+        $("#header-btn").empty();
+        giphyArray.push(btnGiphy);
+        createBtn();
+    }
     })
 
 function createBtn(){
     $("#header-btn").empty();
-
     for (let i = 0; i < giphyArray.length; i++){
         headerBtns = $("<button>").attr("data-gif", giphyArray[i]).addClass("gifBtn").text(giphyArray[i]);
         $("#header-btn").append(headerBtns);
@@ -66,7 +65,7 @@ $(document).on("click", ".gifBtn", function(){
        })
 
        $(document).on("click", ".img-class", function(){
-            var state = $(image).attr("data-state"); //Why does it have to be "image" and not "this"
+            var state = $(this).attr("data-state");
             console.log(state);
             if (state === "still"){
                 $(this).attr("src", $(this).attr("data-animate"));
