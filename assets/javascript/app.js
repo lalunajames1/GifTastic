@@ -8,7 +8,7 @@ $("#search-btn").on("click", function(event){
      // console.log(btnGiphy);
      // console.log(giphyArray)
           if (btnGiphy == ""){
-        alert("hello");
+        $("#header-btn").text("Add a query to the field.");
     } else {
         $("#header-btn").empty();
         giphyArray.push(btnGiphy);
